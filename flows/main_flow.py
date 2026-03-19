@@ -4,12 +4,14 @@ import pandas as pd
 import os
 
 from scraper.mvideo import get_price as mvideo_price
+from scraper.citilink import get_price as citilink_price
 
 
 @task
 def collect_data():
     data = [
         {"shop": "mvideo", "price": mvideo_price()},
+        {"shop": "citilink", "price": citilink_price()},
     ]
 
     for d in data:
