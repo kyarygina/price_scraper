@@ -4,7 +4,6 @@ import matplotlib.dates as mdates
 
 
 def run_analysis():
-
     df = pd.read_csv("data/raw/prices.csv")
 
     df["timestamp"] = pd.to_datetime(df["timestamp"])
@@ -27,6 +26,7 @@ def run_analysis():
     plt.title("Price dynamics")
     plt.tight_layout()
     plt.savefig("data/processed/plot.png")
+
 
 if __name__ == "__main__":
     run_analysis()

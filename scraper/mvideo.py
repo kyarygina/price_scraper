@@ -4,8 +4,8 @@ from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 import time
 
-def get_price():
 
+def get_price():
     # Скрываем управление автоматизированным ПО
     options = webdriver.ChromeOptions()
     options.add_argument("--disable-blink-features=AutomationControlled")

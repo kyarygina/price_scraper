@@ -4,6 +4,7 @@ from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 import time
 
+
 def get_price():
     # Скрываем управление автоматизированным ПО
     options = webdriver.ChromeOptions()
@@ -19,7 +20,7 @@ def get_price():
 
     wait = WebDriverWait(driver, 15)
 
-    #Переходим на главную страницу сайта
+    # Переходим на главную страницу сайта
     driver.get("https://www.citilink.ru")
     time.sleep(2)
 
@@ -50,7 +51,8 @@ def get_price():
     # Получаем цену
     try:
         price = wait.until(
-            EC.presence_of_element_located((By.CSS_SELECTOR, "div[data-meta-name='PriceBlock__price'] span[data-meta-price]"))
+            EC.presence_of_element_located(
+                (By.CSS_SELECTOR, "div[data-meta-name='PriceBlock__price'] span[data-meta-price]"))
         ).text
         price = price.replace("₽", "").replace(" ", "")
     except:
