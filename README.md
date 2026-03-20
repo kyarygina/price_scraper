@@ -1,4 +1,4 @@
-# price_scraper
+# Price scraper
 
 Установка зависимостей:
 

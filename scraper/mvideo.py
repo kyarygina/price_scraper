@@ -6,7 +6,7 @@ import time
 
 def get_price():
 
-    #Скрываем управление автоматизированным ПО
+    # Скрываем управление автоматизированным ПО
     options = webdriver.ChromeOptions()
     options.add_argument("--disable-blink-features=AutomationControlled")
 
@@ -20,14 +20,14 @@ def get_price():
 
     wait = WebDriverWait(driver, 15)
 
-    #Переходим по ссылке, которая задаст необходимый город
+    # Переходим по ссылке, которая задаст необходимый город
     driver.get("https://www.mvideo.ru/?cityId=CityCZ_984")
     time.sleep(2)
 
-    #Переходим по ссылке на необходимый товар
+    # Переходим по ссылке на необходимый товар
     driver.get("https://www.mvideo.ru/products/elektricheskii-duhovoi-shkaf-bosch-hbf534es0q-400177526")
 
-    #Получаем цену и убираем лишние символы
+    # Получаем цену и убираем лишние символы
     price = wait.until(
         EC.presence_of_element_located((By.CSS_SELECTOR, "span.price__main-value"))
     ).text
