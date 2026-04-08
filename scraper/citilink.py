@@ -46,7 +46,8 @@ def get_price():
         print("Попап выбора города не найден — используем город по умолчанию")
 
     # Переходим по ссылке на товар
-    driver.get("https://www.citilink.ru/product/smartfon-apple-iphone-17-pro-max-a3526-256gb-oranzhevyi-3g-4g-6-9-ios-2155818/?text=Apple+iPhone+17+Pro+Max+256GB+Orange++")
+    driver.get(
+        "https://www.citilink.ru/product/smartfon-apple-iphone-17-pro-max-a3526-256gb-oranzhevyi-3g-4g-6-9-ios-2155818/?text=Apple+iPhone+17+Pro+Max+256GB+Orange++")
     time.sleep(2)
 
     # Получаем цену

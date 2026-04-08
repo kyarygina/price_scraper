@@ -5,8 +5,8 @@ import sqlite3
 from scraper.mvideo import get_price as mvideo_price
 from scraper.citilink import get_price as citilink_price
 
-
 DB_PATH = "data/prices.db"
+
 
 @task
 def collect_data():
