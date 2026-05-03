@@ -25,7 +25,7 @@ def get_price():
     time.sleep(2)
 
     # Переходим по ссылке на необходимый товар
-    driver.get("https://www.mvideo.ru/products/elektricheskii-duhovoi-shkaf-bosch-hbf534es0q-400177526")
+    driver.get("https://www.mvideo.ru/products/smartfon-apple-iphone-17-pro-max-256gb-orange-bez-rustore-30087058")
 
     # Получаем цену и убираем лишние символы
     price = wait.until(
